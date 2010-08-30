@@ -1,0 +1,542 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Naadh.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Naadh.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Naadh"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "Naadh Version 0.1Beta",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,38,36,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    LTEXT           "Urmila Ghadge",IDC_STATIC,39,47,119,8
+    LTEXT           "urmila57@gmail.com",IDC_STATIC,39,59,119,8
+    LTEXT           "Naadh is a Freeware, however unauthorized distribution and reselling is prohibited",
+                    IDC_STATIC,7,95,221,22
+END
+
+IDD_NAADH_DIALOG DIALOGEX 0, 0, 610, 316
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Naad"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Play >",IDC_BUTTON_PLAY,98,264,71,16
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,269,264,71,16
+    CONTROL         "",IDC_SLIDER_TEMPO,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_BOTH | WS_TABSTOP,14,203,180,22
+    PUSHBUTTON      "Exit",IDOK,440,264,71,16
+    LTEXT           "Static",IDC_STATIC_MSG,7,289,294,10,SS_SUNKEN
+    CONTROL         "Custom1",IDC_LIST,"CMultilineList",WS_TABSTOP,7,6,596,
+                    127
+    GROUPBOX        "Tempo or Gati",IDC_STATIC,7,182,190,60
+    CTEXT           "Madhya",IDC_STATIC,86,228,32,8
+    CTEXT           "Vilambit",IDC_STATIC,14,228,32,8
+    CTEXT           "Drut",IDC_STATIC,158,228,32,8
+    GROUPBOX        "Timing Variation and Randomness",IDC_STATIC,403,182,190,
+                    60
+    CONTROL         "",IDC_SLIDER_RAND,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_BOTH | WS_TABSTOP,408,203,180,22
+    CTEXT           "Too Perfect",IDC_STATIC,413,229,39,8
+    CTEXT           "Natural",IDC_STATIC,480,229,39,8
+    CTEXT           "Imperfect",IDC_STATIC,547,229,39,8
+    LTEXT           "Static",IDC_STATIC_FILE,309,289,294,10,SS_SUNKEN
+    CONTROL         "Accompaniment # 1",IDC_CHECK_ACC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,218,151,80,12
+    GROUPBOX        "Taal",IDC_STATIC,7,139,190,31
+    CTEXT           "1 Maatra = ",IDC_STATIC,30,153,39,8
+    COMBOBOX        IDC_COMBO_MATRA,73,151,42,130,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "Bols",IDC_STATIC,118,153,27,8
+    GROUPBOX        "Effects / Extras",IDC_STATIC,403,139,190,31
+    CONTROL         "Stereo",IDC_CHECK_STEREO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,487,154,41,9
+    CONTROL         "Echo",IDC_CHECK_ECHO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,545,154,41,9
+    CONTROL         "Variety in Bols",IDC_CHECK_RNDBOL,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,525,266,68,
+                    12
+    CONTROL         "",IDC_SLIDER_BOLVAR,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_BOTH | WS_TABSTOP,212,203,180,22
+    GROUPBOX        "Bol Variety",IDC_STATIC,205,182,190,60
+    CTEXT           "Medium",IDC_STATIC,284,228,32,8
+    CTEXT           "Narrow",IDC_STATIC,212,228,32,8
+    CTEXT           "Wide",IDC_STATIC,356,228,32,8
+    GROUPBOX        "Accompaniments",IDC_STATIC,206,139,190,31
+    CONTROL         "Accompaniment # 2",IDC_CHECK_ACC2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,308,151,80,12
+    CONTROL         "Sam Beat",IDC_CHECK_SAM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,420,153,41,9
+END
+
+IDD_DIALOG_ABT DIALOGEX 0, 0, 394, 192
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "About Naad"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "~o~ Close ~o~",IDOK,7,171,380,14,BS_FLAT
+    LTEXT           "Static",IDC_STATIC_ABT,7,7,380,158
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,2,0,0
+ PRODUCTVERSION 0,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Urmi"
+            VALUE "FileDescription", "Naad"
+            VALUE "FileVersion", "0.2.0.0"
+            VALUE "InternalName", "Naadh.exe"
+            VALUE "LegalCopyright", "(c) Urmila Ghadge.  All rights reserved."
+            VALUE "OriginalFilename", "Naadh.exe"
+            VALUE "ProductName", "Naad Ver 0.2 Beta"
+            VALUE "ProductVersion", "0.2.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_NAADH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 603
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_DIALOG_ABT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 387
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        ID_FILE_NEWTAAL
+        MENUITEM "&Open",                       ID_FILE_OPEN32773
+        MENUITEM SEPARATOR
+        MENUITEM "&Save",                       ID_FILE_SAVE32774
+        MENUITEM "Save &As",                    ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Accompaniment"
+    BEGIN
+        POPUP "Taanpura"
+        BEGIN
+            MENUITEM "&1. Tanpura (Sa Pa) in G",    ID_ACCOMPANIMENT_TANPURA
+            MENUITEM "&4. Tanpura (Sa Ma) in C",    ID_ACCOMPANIMENT_4
+            MENUITEM "&3. Tanpura (Sa Ma) in G",    ID_ACCOMPANIMENT_3
+            MENUITEM "&2. Tanpura (Sa Pa) in C",    ID_ACCOMPANIMENT_2
+        END
+        POPUP "Organ"
+        BEGIN
+            MENUITEM "&1. Organ (Sa Ma) in G",      ID_ACCOMPANIMENT_7
+            MENUITEM "&2. Organ (Sa Ma) in C",      ID_ACCOMPANIMENT_8
+            MENUITEM "&3. Organ (Sa Pa) in C",      ID_ACCOMPANIMENT_6
+            MENUITEM "&4. Organ (Sa Pa) in G",      ID_ACCOMPANIMENT_5
+        END
+        POPUP "Ghungru"
+        BEGIN
+            MENUITEM "&1. Ghungru 01",              ID_GHUNGRU_GHUNGRU01
+            MENUITEM "&2. Ghungru 02",              ID_GHUNGRU_GHUNGRU02
+            MENUITEM "&3. Ghungru 03",              ID_GHUNGRU_GHUNGRU03
+            MENUITEM "&4. Ghungru 04",              ID_GHUNGRU_GHUNGRU04
+            MENUITEM "&5. Ghungru 05",              ID_GHUNGRU_GHUNGRU05
+        END
+    END
+    POPUP "&Instrument"
+    BEGIN
+        MENUITEM "&Tabla",                      ID_INSTRUMENT_TABLA
+        MENUITEM "&Dholak",                     ID_INSTRUMENT_DHOLAK
+        MENUITEM "&Pakhawaj",                   ID_INSTRUMENT_PAKHAWAJ
+        MENUITEM "&Mridangam",                  ID_INSTRUMENT_MRIDANGAM
+        MENUITEM "D&hapli",                     ID_INSTRUMENT_DHAPLI
+        MENUITEM "D&rums",                      ID_INSTRUMENT_D
+        MENUITEM "&Congo",                      ID_INSTRUMENT_CONGO
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Settings",                   ID_OPTIONS_SETTINGS
+        MENUITEM "&Bol Folder",                 ID_OPTIONS_BOLFOLDER
+        MENUITEM "&Play All Samples",           ID_OPTIONS_PLAYALLSAMPLES
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Naad &Help",                  ID_HELP_NAADHHELP
+        MENUITEM SEPARATOR
+        MENUITEM "Check for &Updates",          ID_HELP_CHECKFORUPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "&About Naad",                 ID_HELP_ABOUTNAADH
+        MENUITEM "&Contact",                    ID_HELP_CONTACT
+    END
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "Bols"
+    BEGIN
+        POPUP ">    Dayan"
+        BEGIN
+            POPUP "Na"
+            BEGIN
+                MENUITEM "Na01",                        ID_NA_NA01
+                MENUITEM "Na02",                        ID_NA_NA02
+                MENUITEM "Na03",                        ID_NA_NA03
+                MENUITEM "Na04",                        ID_NA_NA04
+                MENUITEM "Na05",                        ID_NA_NA05
+                MENUITEM "Na06",                        ID_NA_NA06
+                MENUITEM "Na07",                        ID_NA_NA07
+                MENUITEM "Na08",                        ID_NA_NA08
+                MENUITEM "Na09",                        ID_NA_NA09
+                MENUITEM "Na10",                        ID_NA_NA10
+            END
+            POPUP "Ta"
+            BEGIN
+                MENUITEM "Ta01",                        ID_TA_TA01
+                MENUITEM "Ta02",                        ID_TA_TA02
+                MENUITEM "Ta03",                        ID_TA_TA03
+                MENUITEM "Ta04",                        ID_TA_TA04
+                MENUITEM "Ta05",                        ID_TA_TA05
+                MENUITEM "Ta06",                        ID_TA_TA06
+                MENUITEM "Ta07",                        ID_TA_TA07
+                MENUITEM "Ta08",                        ID_TA_TA08
+                MENUITEM "Ta09",                        ID_TA_TA09
+                MENUITEM "Ta10",                        ID_TA_TA10
+            END
+            POPUP "Ti"
+            BEGIN
+                MENUITEM "Ti01",                        ID_TI_TI01
+                MENUITEM "Ti02",                        ID_TI_TI02
+                MENUITEM "Ti03",                        ID_TI_TI03
+                MENUITEM "Ti04",                        ID_TI_TI04
+                MENUITEM "Ti05",                        ID_TI_TI05
+                MENUITEM "Ti06",                        ID_TI_TI06
+                MENUITEM "Ti07",                        ID_TI_TI07
+                MENUITEM "Ti08",                        ID_TI_TI08
+                MENUITEM "Ti09",                        ID_TI_TI09
+                MENUITEM "Ti10",                        ID_TI_TI10
+            END
+            POPUP "Tin"
+            BEGIN
+                MENUITEM "Tin01",                       ID_TIN_TIN01
+                MENUITEM "Tin02",                       ID_TIN_TIN02
+                MENUITEM "Tin03",                       ID_TIN_TIN03
+                MENUITEM "Tin04",                       ID_TIN_TIN04
+                MENUITEM "Tin05",                       ID_TIN_TIN05
+                MENUITEM "Tin06",                       ID_TIN_TIN06
+                MENUITEM "Tin07",                       ID_TIN_TIN07
+                MENUITEM "Tin08",                       ID_TIN_TIN08
+                MENUITEM "Tin09",                       ID_TIN_TIN09
+                MENUITEM "Tin10",                       ID_TIN_TIN10
+            END
+            POPUP "Tun"
+            BEGIN
+                MENUITEM "Tun01",                       ID_TUN_TUN01
+                MENUITEM "Tun02",                       ID_TUN_TUN02
+                MENUITEM "Tun03",                       ID_TUN_TUN03
+                MENUITEM "Tun04",                       ID_TUN_TUN04
+                MENUITEM "Tun05",                       ID_TUN_TUN05
+                MENUITEM "Tun06",                       ID_TUN_TUN06
+                MENUITEM "Tun07",                       ID_TUN_TUN07
+                MENUITEM "Tun08",                       ID_TUN_TUN08
+                MENUITEM "Tun09",                       ID_TUN_TUN09
+                MENUITEM "Tun10",                       ID_TUN_TUN10
+            END
+        END
+        POPUP "<    Bayan"
+        BEGIN
+            POPUP "Dha"
+            BEGIN
+                MENUITEM "Dha01",                       ID_DHA_DHA01
+                MENUITEM "Dha02",                       ID_DHA_DHA02
+                MENUITEM "Dha03",                       ID_DHA_DHA03
+                MENUITEM "Dha04",                       ID_DHA_DHA04
+                MENUITEM "Dha05",                       ID_DHA_DHA05
+                MENUITEM "Dha06",                       ID_DHA_DHA06
+                MENUITEM "Dha07",                       ID_DHA_DHA07
+                MENUITEM "Dha08",                       ID_DHA_DHA08
+                MENUITEM "Dha09",                       ID_DHA_DHA09
+                MENUITEM "Dha10",                       ID_DHA_DHA10
+            END
+            POPUP "Dhin"
+            BEGIN
+                MENUITEM "Dhin01",                      ID_DHIN_DHIN01
+                MENUITEM "Dhin02",                      ID_DHIN_DHIN02
+                MENUITEM "Dhin03",                      ID_DHIN_DHIN03
+                MENUITEM "Dhin04",                      ID_DHIN_DHIN04
+                MENUITEM "Dhin05",                      ID_DHIN_DHIN05
+                MENUITEM "Dhin06",                      ID_DHIN_DHIN06
+                MENUITEM "Dhin07",                      ID_DHIN_DHIN07
+                MENUITEM "Dhin08",                      ID_DHIN_DHIN08
+                MENUITEM "Dhin09",                      ID_DHIN_DHIN09
+                MENUITEM "Dhin10",                      ID_DHIN_DHIN10
+            END
+            POPUP "Dhit"
+            BEGIN
+                MENUITEM "Dhit01",                      ID_DHIT_DHIT01
+                MENUITEM "Dhit02",                      ID_DHIT_DHIT02
+                MENUITEM "Dhit03",                      ID_DHIT_DHIT03
+                MENUITEM "Dhit04",                      ID_DHIT_DHIT04
+                MENUITEM "Dhit05",                      ID_DHIT_DHIT05
+                MENUITEM "Dhit06",                      ID_DHIT_DHIT06
+                MENUITEM "Dhit07",                      ID_DHIT_DHIT07
+                MENUITEM "Dhit08",                      ID_DHIT_DHIT08
+                MENUITEM "Dhit09",                      ID_DHIT_DHIT09
+                MENUITEM "Dhit10",                      ID_DHIT_DHIT10
+            END
+            POPUP "Dhun"
+            BEGIN
+                MENUITEM "Dhun01",                      ID_DHUN_DHUN01
+                MENUITEM "Dhun02",                      ID_DHUN_DHUN02
+                MENUITEM "Dhun03",                      ID_DHUN_DHUN03
+                MENUITEM "Dhun04",                      ID_DHUN_DHUN04
+                MENUITEM "Dhun05",                      ID_DHUN_DHUN05
+                MENUITEM "Dhun06",                      ID_DHUN_DHUN06
+                MENUITEM "Dhun07",                      ID_DHUN_DHUN07
+                MENUITEM "Dhun08",                      ID_DHUN_DHUN08
+                MENUITEM "Dhun09",                      ID_DHUN_DHUN09
+                MENUITEM "Dhun10",                      ID_DHUN_DHUN10
+            END
+            POPUP "Ga"
+            BEGIN
+                MENUITEM "Ga01",                        ID_GA_GA01
+                MENUITEM "Ga02",                        ID_GA_GA02
+                MENUITEM "Ga03",                        ID_GA_GA03
+                MENUITEM "Ga04",                        ID_GA_GA04
+                MENUITEM "Ga05",                        ID_GA_GA05
+                MENUITEM "Ga06",                        ID_GA_GA06
+                MENUITEM "Ga07",                        ID_GA_GA07
+                MENUITEM "Ga08",                        ID_GA_GA08
+                MENUITEM "Ga09",                        ID_GA_GA09
+                MENUITEM "Ga10",                        ID_GA_GA10
+            END
+            POPUP "Ge"
+            BEGIN
+                MENUITEM "Ge01",                        ID_GE_GE01
+                MENUITEM "Ge02",                        ID_GE_GE02
+                MENUITEM "Ge03",                        ID_GE_GE03
+                MENUITEM "Ge04",                        ID_GE_GE04
+                MENUITEM "Ge05",                        ID_GE_GE05
+                MENUITEM "Ge06",                        ID_GE_GE06
+                MENUITEM "Ge07",                        ID_GE_GE07
+                MENUITEM "Ge08",                        ID_GE_GE08
+                MENUITEM "Ge09",                        ID_GE_GE09
+                MENUITEM "Ge10",                        ID_GE_GE10
+            END
+            POPUP "Ke"
+            BEGIN
+                MENUITEM "Ke01",                        ID_KE_KE01
+                MENUITEM "Ke02",                        ID_KE_KE02
+                MENUITEM "Ke03",                        ID_KE_KE03
+                MENUITEM "Ke04",                        ID_KE_KE04
+                MENUITEM "Ke05",                        ID_KE_KE05
+                MENUITEM "Ke06",                        ID_KE_KE06
+                MENUITEM "Ke07",                        ID_KE_KE07
+                MENUITEM "Ke08",                        ID_KE_KE08
+                MENUITEM "Ke09",                        ID_KE_KE09
+                MENUITEM "Ke10",                        ID_KE_KE10
+            END
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "~O~   Silence",               ID_BOLS_SILENCE
+        MENUITEM SEPARATOR
+        MENUITEM "X     Clear",                 ID_BOLS_CLEAR32792
+        MENUITEM SEPARATOR
+        MENUITEM "~S~ Sam",                     ID_BOLS_SAM
+        MENUITEM "~T~ Tali",                    ID_BOLS_TALI
+        MENUITEM "~K~ Khali",                   ID_BOLS_KHALI
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_NAADH_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0037, 
+    IDC_COMBO_MATRA, 0x403, 2, 0
+0x0038, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Naadh..."
+    IDS_UPDATE_AVAILABLE    "You are currently using version %u.%u\r\nThe newest version %u.%u is available online for free.\r\nDo you wish to download it now ?"
+    IDS_UPDATE_NO           "No Updates are available.\r\nThis is the latest version."
+    IDS_UPDATE_NOCHECK      "Unable to check for updates."
+    IDS_UPDATE              "http://iguana211.110mb.com/updatenaadh.txt"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Naadh.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
