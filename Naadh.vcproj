@@ -132,6 +132,21 @@
 				RelativePath=".\AboutNaadDlg.cpp">
 			</File>
 			<File
+				RelativePath=".\Bol.cpp">
+			</File>
+			<File
+				RelativePath=".\Composition.cpp">
+			</File>
+			<File
+				RelativePath=".\CompPropDlg.cpp">
+			</File>
+			<File
+				RelativePath=".\Loop.cpp">
+			</File>
+			<File
+				RelativePath=".\LoopPropDlg.cpp">
+			</File>
+			<File
 				RelativePath=".\MultilineList.cpp">
 			</File>
 			<File
@@ -176,6 +191,21 @@
 				RelativePath=".\AboutNaadDlg.h">
 			</File>
 			<File
+				RelativePath=".\Bol.h">
+			</File>
+			<File
+				RelativePath=".\Composition.h">
+			</File>
+			<File
+				RelativePath=".\CompPropDlg.h">
+			</File>
+			<File
+				RelativePath=".\Loop.h">
+			</File>
+			<File
+				RelativePath=".\LoopPropDlg.h">
+			</File>
+			<File
 				RelativePath=".\MultilineList.h">
 			</File>
 			<File
@@ -207,6 +237,9 @@
 			Name="Resource Files"
 			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
 			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}">
+			<File
+				RelativePath=".\res\idr_main.ico">
+			</File>
 			<File
 				RelativePath=".\res\Naadh.ico">
 			</File>

@@ -12,8 +12,13 @@
 #define IDS_UPDATE                      105
 #define IDR_MAINFRAME                   128
 #define IDR_MENU1                       129
+#define IDR_ICON1                       129
 #define IDR_MENU2                       130
 #define IDD_DIALOG_ABT                  131
+#define IDR_MENU3                       132
+#define IDD_DIALOG_PROPCOMP             133
+#define IDD_DIALOG_PROPLOOP             134
+#define IDI_ICON1                       136
 #define IDC_STATIC_MSG                  1000
 #define IDC_LIST                        1001
 #define IDC_BUTTON_PLAY                 1002
@@ -26,15 +31,38 @@
 #define IDC_CHECK_ACC                   1007
 #define IDC_COMBO1                      1008
 #define IDC_COMBO_MATRA                 1008
+#define IDC_CHECK_VARSAME               1008
 #define IDC_CHECK_STEREO                1009
+#define IDC_COMBO_ACC                   1009
 #define IDC_CHECK_STEREO2               1010
 #define IDC_CHECK_ECHO                  1010
 #define IDC_BUTTON1                     1011
 #define IDC_CHECK_RNDBOL                1011
 #define IDC_CHECK_STEREO3               1012
 #define IDC_CHECK_SAM                   1012
+#define IDC_EDIT_COMPNAME               1012
 #define IDC_SLIDER_BOLVAR               1013
+#define IDC_EDIT_COMPOSER               1013
+#define IDC_EDIT_LOOPNAME               1013
 #define IDC_CHECK_ACC2                  1014
+#define IDC_EDIT_COMPNOTES              1014
+#define IDC_EDIT_REPEAT                 1014
+#define IDC_EDIT_LOOPNOTES              1015
+#define IDC_CHECK_VARANY                1015
+#define IDC_EDIT_DELAY                  1016
+#define IDC_CHECK_VARCOMP               1016
+#define IDC_CHECK_B2B                   1017
+#define IDC_CHECK_VARLOOP               1017
+#define IDC_BUTTON2                     1018
+#define IDC_BUTTON_SAVEVAR              1018
+#define IDC_EDIT_MAATRAS                1018
+#define IDC_BUTTON_GUN1                 1019
+#define IDC_BUTTON_AUTOCOMPOSE          1023
+#define IDC_EDIT_TEMPO                  1024
+#define IDC_EDIT_TEMPOVAR               1025
+#define IDC_EDIT_BOLVAR                 1026
+#define IDC_BUTTON_PLAYLOOP             1027
+#define IDC_BUTTON_RESVAR               1028
 #define ID_HELP_NAADHHELP               32771
 #define ID_HELP_ABOUTNAADH              32772
 #define ID_FILE_OPEN32773               32773
@@ -102,11 +130,11 @@
 #define ID_TI_TI06                      32835
 #define ID_TI_TI07                      32836
 #define ID_TI_TI08                      32837
+#define ID_TI_TI09                      32838
+#define ID_TI_TI10                      32839
 #define ID_TIN_TIN01                    32840
 #define ID_TIN_TIN02                    32841
-#define ID_INSTRUMENT_D                 32842
 #define ID_TIN_TIN03                    32842
-#define ID_INSTRUMENT_CONGO             32843
 #define ID_TIN_TIN04                    32843
 #define ID_TIN_TIN05                    32844
 #define ID_TIN_TIN06                    32845
@@ -199,23 +227,44 @@
 #define ID_ACCOMPANIMENT_ORGAN          32933
 #define ID_ACCOMPANIMENT_GHUNGRU        32934
 #define ID_GHUNGRU_GHUNGRU01            32937
-#define ID_TI_TI09                      32938
 #define ID_GHUNGRU_GHUNGRU02            32938
-#define ID_TI_TI10                      32939
 #define ID_GHUNGRU_GHUNGRU03            32939
 #define ID_GHUNGRU_GHUNGRU04            32940
 #define ID_GHUNGRU_GHUNGRU05            32941
+#define ID_GHUNGRU_GHUNGRU06            32942
 #define ID_BOLS_SAM                     32947
 #define ID_BOLS_TALI                    32948
 #define ID_BOLS_KHALI                   32949
+#define ID_INSTRUMENT_CONGO             32950
+#define ID_INSTRUMENT_D                 32951
+#define ID_GHUNGRU_6                    32952
+#define ID_EDIT_SELECT                  32955
+#define ID_EDIT_COPY32956               32956
+#define ID_EDIT_CUT32957                32957
+#define ID_EDIT_PASTE32958              32958
+#define ID_FILE_NEWCOMPOSITION          32959
+#define ID_LOOP_OPEN                    32960
+#define ID_LOOP_CLEAR                   32961
+#define ID_LOOP_PROPERTIES              32962
+#define ID_LOOP_SAVELOOP                32963
+#define ID_LOOP_LOADLOOP                32964
+#define ID_VIEW_COMPOSITION             32965
+#define ID_VIEW_LOOP                    32966
+#define ID_BOLS_VIEWCOMP                32968
+#define ID_BOLS_                        32969
+#define ID__DHAGETITA                   32970
+#define ID__DHAGETUNA                   32971
+#define ID__GADHIGENA                   32972
+#define ID__TIRAKETADHA                 32973
+#define ID_EDIT_CLEAR32974              32974
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        132
-#define _APS_NEXT_COMMAND_VALUE         32950
-#define _APS_NEXT_CONTROL_VALUE         1012
+#define _APS_NEXT_RESOURCE_VALUE        137
+#define _APS_NEXT_COMMAND_VALUE         32975
+#define _APS_NEXT_CONTROL_VALUE         1025
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

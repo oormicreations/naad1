@@ -40,6 +40,7 @@ BOOL CAboutNaadDlg::OnInitDialog()
 	m_AboutText += "\r\n\r\n\r\n\r\nCredits :\r\n* Multiline List Control\tCopyright(C) 2006 Dave Calkins (coder1024@gmail.com)\r\n";
 	m_AboutText += "* UpdateCheck Class\tCopyright(C) 2003 Alexander Bischofberger (www.bluescreen.de)\r\n";
 	m_AboutText += "* Image Support\tJim Dill (jim@jimdill.net) and Tobias Eiseler (tobias.eiseler@sisternicky.com)\r\n";
+	m_AboutText += "* WaveBox Class\tZenith__ (jim@jimdill.net) and Tobias Eiseler (tobias.eiseler@sisternicky.com)\r\n";
 	m_AboutText += "\r\n\r\nNaad is a freeware, however unauthorized re-sale and distribution is prohibited\r\nPlease see Help document for licensing and contact info";
 	m_zoomCtrl.m_ImageName = m_AboutText;
 	m_zoomCtrl.m_About = true;

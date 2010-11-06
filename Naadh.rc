@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -65,6 +63,8 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\Naadh.ico"
+IDR_ICON1               ICON                    "res\\idr_main.ico"
+IDI_ICON1               ICON                    "res\\icon1.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -72,75 +72,66 @@ IDR_MAINFRAME           ICON                    "res\\Naadh.ico"
 //
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 235, 151
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
-    WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About Naadh"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
-    LTEXT           "Naadh Version 0.1Beta",IDC_STATIC,40,10,119,8,
-                    SS_NOPREFIX
+    LTEXT           "Naadh Version 0.1Beta",IDC_STATIC,40,10,119,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2010",IDC_STATIC,38,36,119,8
     DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
     LTEXT           "Urmila Ghadge",IDC_STATIC,39,47,119,8
     LTEXT           "urmila57@gmail.com",IDC_STATIC,39,59,119,8
-    LTEXT           "Naadh is a Freeware, however unauthorized distribution and reselling is prohibited",
-                    IDC_STATIC,7,95,221,22
+    LTEXT           "Naadh is a Freeware, however unauthorized distribution and reselling is prohibited",IDC_STATIC,7,95,221,22
 END
 
 IDD_NAADH_DIALOG DIALOGEX 0, 0, 610, 316
-STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
-    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION "Naad"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    DEFPUSHBUTTON   "Play >",IDC_BUTTON_PLAY,98,264,71,16
-    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,269,264,71,16
-    CONTROL         "",IDC_SLIDER_TEMPO,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,14,203,180,22
-    PUSHBUTTON      "Exit",IDOK,440,264,71,16
+    DEFPUSHBUTTON   "Play >",IDC_BUTTON_PLAY,126,264,71,16
+    PUSHBUTTON      "Stop",IDC_BUTTON_STOP,412,264,71,16
+    CONTROL         "",IDC_SLIDER_TEMPO,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,14,188,180,22
+    PUSHBUTTON      "Exit",IDOK,532,262,71,16,NOT WS_VISIBLE
     LTEXT           "Static",IDC_STATIC_MSG,7,289,294,10,SS_SUNKEN
-    CONTROL         "Custom1",IDC_LIST,"CMultilineList",WS_TABSTOP,7,6,596,
-                    127
-    GROUPBOX        "Tempo or Gati",IDC_STATIC,7,182,190,60
-    CTEXT           "Madhya",IDC_STATIC,86,228,32,8
-    CTEXT           "Vilambit",IDC_STATIC,14,228,32,8
-    CTEXT           "Drut",IDC_STATIC,158,228,32,8
-    GROUPBOX        "Timing Variation and Randomness",IDC_STATIC,403,182,190,
-                    60
-    CONTROL         "",IDC_SLIDER_RAND,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,408,203,180,22
-    CTEXT           "Too Perfect",IDC_STATIC,413,229,39,8
-    CTEXT           "Natural",IDC_STATIC,480,229,39,8
-    CTEXT           "Imperfect",IDC_STATIC,547,229,39,8
+    CONTROL         "Custom1",IDC_LIST,"CMultilineList",WS_TABSTOP,7,6,596,127
+    GROUPBOX        "Tempo or Gati",IDC_STATIC,7,176,190,82
+    CTEXT           "Madhya",IDC_STATIC,86,213,32,8
+    CTEXT           "Vilambit",IDC_STATIC,14,213,32,8
+    CTEXT           "Drut",IDC_STATIC,158,213,32,8
+    GROUPBOX        "Timing Variation and Randomness",IDC_STATIC,211,179,190,78
+    CONTROL         "",IDC_SLIDER_RAND,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,217,191,180,22
+    CTEXT           "Too Perfect",IDC_STATIC,222,217,39,8
+    CTEXT           "Natural",IDC_STATIC,289,217,39,8
+    CTEXT           "Imperfect",IDC_STATIC,356,217,39,8
     LTEXT           "Static",IDC_STATIC_FILE,309,289,294,10,SS_SUNKEN
-    CONTROL         "Accompaniment # 1",IDC_CHECK_ACC,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,218,151,80,12
-    GROUPBOX        "Taal",IDC_STATIC,7,139,190,31
-    CTEXT           "1 Maatra = ",IDC_STATIC,30,153,39,8
-    COMBOBOX        IDC_COMBO_MATRA,73,151,42,130,CBS_DROPDOWNLIST | 
-                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
-    CTEXT           "Bols",IDC_STATIC,118,153,27,8
-    GROUPBOX        "Effects / Extras",IDC_STATIC,403,139,190,31
-    CONTROL         "Stereo",IDC_CHECK_STEREO,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,487,154,41,9
-    CONTROL         "Echo",IDC_CHECK_ECHO,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,545,154,41,9
-    CONTROL         "Variety in Bols",IDC_CHECK_RNDBOL,"Button",
-                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,525,266,68,
-                    12
-    CONTROL         "",IDC_SLIDER_BOLVAR,"msctls_trackbar32",TBS_AUTOTICKS | 
-                    TBS_BOTH | WS_TABSTOP,212,203,180,22
-    GROUPBOX        "Bol Variety",IDC_STATIC,205,182,190,60
-    CTEXT           "Medium",IDC_STATIC,284,228,32,8
-    CTEXT           "Narrow",IDC_STATIC,212,228,32,8
-    CTEXT           "Wide",IDC_STATIC,356,228,32,8
-    GROUPBOX        "Accompaniments",IDC_STATIC,206,139,190,31
-    CONTROL         "Accompaniment # 2",IDC_CHECK_ACC2,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,308,151,80,12
-    CONTROL         "Sam Beat",IDC_CHECK_SAM,"Button",BS_AUTOCHECKBOX | 
-                    WS_TABSTOP,420,153,41,9
+    CONTROL         "Tanpura",IDC_CHECK_ACC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,224,154,43,12
+    GROUPBOX        "Composition",IDC_STATIC,7,139,190,34
+    CONTROL         "Stereo",IDC_CHECK_STEREO,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,7,258,41,9
+    CONTROL         "Echo",IDC_CHECK_ECHO,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,7,268,41,9
+    CONTROL         "Test Test",IDC_CHECK_RNDBOL,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,276,45,12
+    CONTROL         "",IDC_SLIDER_BOLVAR,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,417,151,180,22
+    GROUPBOX        "Bol Variety",IDC_STATIC,413,139,190,118
+    CTEXT           "Medium",IDC_STATIC,493,176,32,8
+    CTEXT           "Narrow",IDC_STATIC,421,176,32,8
+    CTEXT           "Wide",IDC_STATIC,565,176,32,8
+    GROUPBOX        "Accompaniments",IDC_STATIC,210,139,190,34
+    CONTROL         "Lehra",IDC_CHECK_ACC2,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,279,155,34,12
+    CONTROL         "Ghungru at Sam",IDC_CHECK_SAM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,328,157,67,9
+    PUSHBUTTON      "Replace the original",IDC_BUTTON_SAVEVAR,425,236,71,16
+    CONTROL         "Use Same Species",IDC_CHECK_VARSAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,519,203,74,12
+    CONTROL         "Use Any Species",IDC_CHECK_VARANY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,519,215,74,12
+    PUSHBUTTON      "1 X",IDC_BUTTON_GUN1,152,230,35,16
+    CONTROL         "Affect Composition",IDC_CHECK_VARCOMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,425,203,74,12
+    CONTROL         "Affect Current Loop",IDC_CHECK_VARLOOP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,425,215,82,12
+    PUSHBUTTON      "Auto Compose",IDC_BUTTON_AUTOCOMPOSE,18,151,71,16
+    EDITTEXT        IDC_EDIT_TEMPO,14,224,127,25,ES_MULTILINE | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_TEMPOVAR,225,229,165,8,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_BOLVAR,426,189,165,8,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED | NOT WS_BORDER
+    PUSHBUTTON      "Play Loop >",IDC_BUTTON_PLAYLOOP,269,264,71,16
+    PUSHBUTTON      "Restore the original",IDC_BUTTON_RESVAR,519,236,71,16,NOT WS_VISIBLE
 END
 
 IDD_DIALOG_ABT DIALOGEX 0, 0, 394, 192
@@ -152,6 +143,48 @@ BEGIN
     LTEXT           "Static",IDC_STATIC_ABT,7,7,380,158
 END
 
+IDD_DIALOG_PROPCOMP DIALOGEX 0, 0, 300, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Composition Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_COMPNAME,51,7,242,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COMPOSER,51,27,242,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_COMPNOTES,7,63,286,72,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    PUSHBUTTON      "Apply",IDOK,243,149,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,149,50,14
+    LTEXT           "Name :",IDC_STATIC,7,7,32,13
+    LTEXT           "Composer :",IDC_STATIC,7,29,43,13
+    LTEXT           "Notes :",IDC_STATIC,7,50,32,13
+END
+
+IDD_DIALOG_PROPLOOP DIALOGEX 0, 0, 300, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Loop Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_LOOPNAME,73,7,220,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_MATRA,73,29,58,130,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_ACC,73,116,126,130,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_REPEAT,73,79,58,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LOOPNOTES,73,137,220,42,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "Apply",IDOK,243,184,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,7,184,50,14
+    LTEXT           "Name :",IDC_STATIC,7,9,32,11
+    LTEXT           "1 Maatra is : ",IDC_STATIC,7,32,45,8
+    CTEXT           "Bols",IDC_STATIC,144,30,18,8
+    LTEXT           "Accompaniment :",IDC_STATIC,7,121,63,8
+    LTEXT           "Repeat :",IDC_STATIC,7,81,32,11
+    CTEXT           "Times",IDC_STATIC,137,80,18,8
+    LTEXT           "Notes :",IDC_STATIC,7,140,32,11
+    EDITTEXT        IDC_EDIT_DELAY,73,97,58,12,ES_AUTOHSCROLL
+    LTEXT           "Tempo :",IDC_STATIC,7,100,32,11
+    CONTROL         "Start just after the last loop",IDC_CHECK_B2B,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,188,99,103,9
+    LTEXT           "Maatras : ",IDC_STATIC,7,56,45,8
+    EDITTEXT        IDC_EDIT_MAATRAS,73,52,58,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "BPM",IDC_STATIC,137,99,39,8
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -159,8 +192,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,2,0,0
- PRODUCTVERSION 0,2,0,0
+ FILEVERSION 0,3,0,0
+ PRODUCTVERSION 0,3,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -175,14 +208,14 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "Urmi"
+            VALUE "CompanyName", "UG Productions Ltd"
             VALUE "FileDescription", "Naad"
-            VALUE "FileVersion", "0.2.0.0"
-            VALUE "InternalName", "Naadh.exe"
+            VALUE "FileVersion", "0.3.0.0"
+            VALUE "InternalName", "Naad.exe"
             VALUE "LegalCopyright", "(c) Urmila Ghadge.  All rights reserved."
-            VALUE "OriginalFilename", "Naadh.exe"
-            VALUE "ProductName", "Naad Ver 0.2 Beta"
-            VALUE "ProductVersion", "0.2.0.0"
+            VALUE "OriginalFilename", "Naad.exe"
+            VALUE "ProductName", "Naad"
+            VALUE "ProductVersion", "0.3.0.0"
         END
     END
     BLOCK "VarFileInfo"
@@ -198,7 +231,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -213,7 +246,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 603
         TOPMARGIN, 6
-        BOTTOMMARGIN, 309
+        BOTTOMMARGIN, 299
     END
 
     IDD_DIALOG_ABT, DIALOG
@@ -222,6 +255,22 @@ BEGIN
         RIGHTMARGIN, 387
         TOPMARGIN, 7
         BOTTOMMARGIN, 185
+    END
+
+    IDD_DIALOG_PROPCOMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_DIALOG_PROPLOOP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 198
     END
 END
 #endif    // APSTUDIO_INVOKED
@@ -232,33 +281,58 @@ END
 // Menu
 //
 
-IDR_MENU1 MENU 
+IDR_MENU1 MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "&New",                        ID_FILE_NEWTAAL
-        MENUITEM "&Open",                       ID_FILE_OPEN32773
+        MENUITEM "New &Composition",            ID_FILE_NEWCOMPOSITION
+        MENUITEM "Add &Loop",                   ID_FILE_NEWTAAL
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Composition",           ID_FILE_OPEN32773
         MENUITEM SEPARATOR
         MENUITEM "&Save",                       ID_FILE_SAVE32774
         MENUITEM "Save &As",                    ID_FILE_SAVEAS
         MENUITEM SEPARATOR
         MENUITEM "E&xit",                       ID_FILE_EXIT
     END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Select",                     ID_EDIT_SELECT
+        MENUITEM "&Copy",                       ID_EDIT_COPY32956
+        MENUITEM "Cu&t",                        ID_EDIT_CUT32957
+        MENUITEM "&Paste",                      ID_EDIT_PASTE32958
+        MENUITEM "Clea&r",                      ID_EDIT_CLEAR32974
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Composition Properties",     ID_VIEW_COMPOSITION
+        MENUITEM "&Loop Properties",            ID_VIEW_LOOP
+    END
+    POPUP "&Instrument"
+    BEGIN
+        MENUITEM "&Tabla",                      ID_INSTRUMENT_TABLA
+        MENUITEM "&Dholak",                     ID_INSTRUMENT_DHOLAK, GRAYED
+        MENUITEM "&Pakhawaj",                   ID_INSTRUMENT_PAKHAWAJ, GRAYED
+        MENUITEM "&Mridangam",                  ID_INSTRUMENT_MRIDANGAM, GRAYED
+        MENUITEM "D&hapli",                     ID_INSTRUMENT_DHAPLI, GRAYED
+        MENUITEM "D&rums",                      ID_INSTRUMENT_D, GRAYED
+        MENUITEM "&Conga",                      ID_INSTRUMENT_CONGO, GRAYED
+    END
     POPUP "&Accompaniment"
     BEGIN
         POPUP "Taanpura"
         BEGIN
             MENUITEM "&1. Tanpura (Sa Pa) in G",    ID_ACCOMPANIMENT_TANPURA
-            MENUITEM "&4. Tanpura (Sa Ma) in C",    ID_ACCOMPANIMENT_4
-            MENUITEM "&3. Tanpura (Sa Ma) in G",    ID_ACCOMPANIMENT_3
-            MENUITEM "&2. Tanpura (Sa Pa) in C",    ID_ACCOMPANIMENT_2
+            MENUITEM "&2. Tanpura (Sa Pa) in C",    ID_ACCOMPANIMENT_2, GRAYED
+            MENUITEM "&3. Tanpura (Sa Ma) in G",    ID_ACCOMPANIMENT_3, GRAYED
+            MENUITEM "&4. Tanpura (Sa Ma) in C",    ID_ACCOMPANIMENT_4, GRAYED
         END
         POPUP "Organ"
         BEGIN
-            MENUITEM "&1. Organ (Sa Ma) in G",      ID_ACCOMPANIMENT_7
-            MENUITEM "&2. Organ (Sa Ma) in C",      ID_ACCOMPANIMENT_8
-            MENUITEM "&3. Organ (Sa Pa) in C",      ID_ACCOMPANIMENT_6
-            MENUITEM "&4. Organ (Sa Pa) in G",      ID_ACCOMPANIMENT_5
+            MENUITEM "&1. Organ (Sa Ma) in G",      ID_ACCOMPANIMENT_7, GRAYED
+            MENUITEM "&2. Organ (Sa Ma) in C",      ID_ACCOMPANIMENT_8, GRAYED
+            MENUITEM "&3. Organ (Sa Pa) in C",      ID_ACCOMPANIMENT_6, GRAYED
+            MENUITEM "&4. Organ (Sa Pa) in G",      ID_ACCOMPANIMENT_5, GRAYED
         END
         POPUP "Ghungru"
         BEGIN
@@ -267,17 +341,8 @@ BEGIN
             MENUITEM "&3. Ghungru 03",              ID_GHUNGRU_GHUNGRU03
             MENUITEM "&4. Ghungru 04",              ID_GHUNGRU_GHUNGRU04
             MENUITEM "&5. Ghungru 05",              ID_GHUNGRU_GHUNGRU05
+            MENUITEM "&6. Ghungru 06",              ID_GHUNGRU_GHUNGRU06, GRAYED
         END
-    END
-    POPUP "&Instrument"
-    BEGIN
-        MENUITEM "&Tabla",                      ID_INSTRUMENT_TABLA
-        MENUITEM "&Dholak",                     ID_INSTRUMENT_DHOLAK
-        MENUITEM "&Pakhawaj",                   ID_INSTRUMENT_PAKHAWAJ
-        MENUITEM "&Mridangam",                  ID_INSTRUMENT_MRIDANGAM
-        MENUITEM "D&hapli",                     ID_INSTRUMENT_DHAPLI
-        MENUITEM "D&rums",                      ID_INSTRUMENT_D
-        MENUITEM "&Congo",                      ID_INSTRUMENT_CONGO
     END
     POPUP "&Options"
     BEGIN
@@ -296,10 +361,12 @@ BEGIN
     END
 END
 
-IDR_MENU2 MENU 
+IDR_MENU2 MENU
 BEGIN
     POPUP "Bols"
     BEGIN
+        MENUITEM "<-  View Composition",        ID_BOLS_VIEWCOMP
+        MENUITEM SEPARATOR
         POPUP ">    Dayan"
         BEGIN
             POPUP "Na"
@@ -462,14 +529,35 @@ BEGIN
                 MENUITEM "Ke10",                        ID_KE_KE10
             END
         END
+        POPUP "<> Pieces"
+        BEGIN
+            MENUITEM "DhaGeTiTa",                   ID__DHAGETITA
+            MENUITEM "DhaGeTuNa",                   ID__DHAGETUNA
+            MENUITEM "GaDhiGeNa",                   ID__GADHIGENA
+            MENUITEM "TiRaKeTaDha",                 ID__TIRAKETADHA
+        END
         MENUITEM SEPARATOR
-        MENUITEM "~O~   Silence",               ID_BOLS_SILENCE
-        MENUITEM SEPARATOR
-        MENUITEM "X     Clear",                 ID_BOLS_CLEAR32792
+        MENUITEM "~o~   Silence",               ID_BOLS_SILENCE
         MENUITEM SEPARATOR
         MENUITEM "~S~ Sam",                     ID_BOLS_SAM
         MENUITEM "~T~ Tali",                    ID_BOLS_TALI
         MENUITEM "~K~ Khali",                   ID_BOLS_KHALI
+        MENUITEM SEPARATOR
+        MENUITEM "X     Clear",                 ID_BOLS_CLEAR32792
+    END
+END
+
+IDR_MENU3 MENU
+BEGIN
+    POPUP "Loop"
+    BEGIN
+        MENUITEM "->   Open",                   ID_LOOP_OPEN
+        MENUITEM "+    Properties",             ID_LOOP_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "^    Load Loop",              ID_LOOP_LOADLOOP
+        MENUITEM "^    Save Loop",              ID_LOOP_SAVELOOP
+        MENUITEM SEPARATOR
+        MENUITEM "X    Clear",                  ID_LOOP_CLEAR
     END
 END
 
@@ -479,7 +567,7 @@ END
 // Dialog Info
 //
 
-IDD_NAADH_DIALOG DLGINIT
+IDD_DIALOG_PROPLOOP DLGINIT
 BEGIN
     IDC_COMBO_MATRA, 0x403, 2, 0
 0x0031, 
@@ -497,6 +585,10 @@ BEGIN
 0x0037, 
     IDC_COMBO_MATRA, 0x403, 2, 0
 0x0038, 
+    IDC_COMBO_ACC, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_COMBO_ACC, 0x403, 8, 0
+0x6154, 0x706e, 0x7275, 0x0061, 
     0
 END
 
@@ -506,7 +598,7 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About Naadh..."
     IDS_UPDATE_AVAILABLE    "You are currently using version %u.%u\r\nThe newest version %u.%u is available online for free.\r\nDo you wish to download it now ?"
@@ -515,7 +607,7 @@ BEGIN
     IDS_UPDATE              "http://iguana211.110mb.com/updatenaadh.txt"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

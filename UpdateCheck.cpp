@@ -80,7 +80,10 @@ void CUpdateCheck::Check(const CString& strURL)
 
 	CWaitCursor wait;
 	//check for a connection
-	BOOL connected = InternetCheckConnection("http://dot.gov.in",FLAG_ICC_FORCE_CONNECTION,0);
+	BOOL connected = FALSE;
+	DWORD flags;
+	connected = InternetGetConnectedState(&flags, NULL);
+
 	if(!connected)
 	{
 		if(m_Quiet) return;

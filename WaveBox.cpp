@@ -37,7 +37,7 @@ CWaveBox::CWaveBox()
     }
     
     // init msg
-    for( i = 0; i < SUPPORT_WAVES; i++ )    W[i].WMSG = WMSG_WAIT;
+    for(int i = 0; i < SUPPORT_WAVES; i++ )    W[i].WMSG = WMSG_WAIT;
 
     // init cs
     InitializeCriticalSection( &cs );
@@ -75,7 +75,7 @@ CWaveBox::~CWaveBox()
 		free( W[i].data );
 
 	// release interface(s)
-	for( i = 0; i < SUPPORT_INTERFACES; i++ )
+	for(int i = 0; i < SUPPORT_INTERFACES; i++ )
 		freeBlocks( I[i].wblock ); 
 
 	// del cs
@@ -272,7 +272,7 @@ static void CALLBACK waveOutProc( HWAVEOUT	hWaveOut,
 {
     // pointer to free block counter
     int* freeBlockCounter = (int*)dwInstance;
-  
+
 	// ignore calls that occur due to openining and closing the device.
     if(uMsg != WOM_DONE)
         return;

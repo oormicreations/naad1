@@ -35,6 +35,11 @@
 // default column width in pixels; this is used if width for a column is
 // not specified
 #define DEFAULT_COLUMN_WIDTH 100
+#define TXTBLACK	RGB(0,0,0)
+#define TXTRED		RGB(220,0,0)
+#define TXTGREEN	RGB(0,160,0)
+#define TXTBLUE		RGB(0,0,220)
+
 
 /**
  * A custom control which provides a multi-column list with varying row heights,
@@ -111,7 +116,7 @@ public:
     * @param row the row number [0...N-1]
     * @param text the desired text for the cell
     */
-   void SetCellText(int col, int row, LPCTSTR text,int align = DT_LEFT);
+   void SetCellText(int col, int row, LPCTSTR text,int align = DT_LEFT, COLORREF color = TXTBLACK);
 
    /**
     * Gets the current text in the specified cell.
@@ -150,6 +155,7 @@ public:
 
       //cafvt custom funcs
 	void SetCellMark(int col, int row, BOOL mark);
+	void SetCellBg(int col, int row, BOOL mark);
 	void SetCellDisable(int col, int row, BOOL dis);
 	void GetCellSelection(void);
 	
@@ -226,17 +232,20 @@ protected:
       // text to display in the cell (can contain '\n' which will cause line breaks)
       CString m_text;
 	  int m_align;
-	  BOOL m_marked;
+	  BOOL m_marked, m_marked2;
 	  int cx1,cy1,cx2,cy2;
 	  BOOL m_disabled;
+  	  COLORREF m_TextColor;
 
       Cell()
       {
-         m_text = _T(" ");
-		 m_align = DT_LEFT;
-		 m_marked = false;
+         m_text			= _T(" ");
+		 m_align		= DT_LEFT;
+		 m_marked		= false;
+		 m_marked2		= false;
+		 m_disabled		= false;
+		 m_TextColor	= TXTBLACK;
 		 cx1=cx2=cy1=cy2=0;
-		 m_disabled = false;
       }
    };
 

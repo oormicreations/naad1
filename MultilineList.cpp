@@ -253,7 +253,7 @@ void CMultilineList::SetColWidth(int col, int width)
    UpdateChildControls();
 }
 
-void CMultilineList::SetCellText(int col, int row, LPCTSTR text, int align)
+void CMultilineList::SetCellText(int col, int row, LPCTSTR text, int align, COLORREF color)
 {
    ASSERT(col >= 0);
    ASSERT(row >= 0);
@@ -273,6 +273,9 @@ void CMultilineList::SetCellText(int col, int row, LPCTSTR text, int align)
       if (cell.m_text == CString(text))
          return;
    }
+
+   //set color
+	cell.m_TextColor = color;
 
    // set cell text
    cell.m_text = text;
@@ -315,6 +318,33 @@ void CMultilineList::SetCellMark(int col, int row, BOOL mark)
    Invalidate(FALSE);
    CalculateRowHeights();
    UpdateChildControls();
+}
+
+void CMultilineList::SetCellBg(int col, int row, BOOL mark)
+{
+   ASSERT(col >= 0);
+   ASSERT(row >= 0);
+   ASSERT(col < m_nCols);
+   ASSERT(row < m_nRows);
+   // use existing cell object (if there is one) or a new one
+   Cell cell;
+   pair<int,int> coord = make_pair(col,row);
+   map<pair<int,int>,Cell>::iterator i = m_cells.find(coord);
+   if (i != m_cells.end())
+   {
+      cell = i->second;
+      if (cell.m_marked2 == mark) return;	// abort if no change
+   }
+   // set cell mark
+	if(!cell.m_disabled) 
+	{
+		cell.m_marked2 = mark;
+		m_cells[coord] = cell;	// store the cell object back in the map
+	}
+   // update
+   //Invalidate(FALSE);
+   //CalculateRowHeights();
+   //UpdateChildControls();
 }
 
 CString CMultilineList::GetCellText(int col, int row)
@@ -1324,7 +1354,8 @@ void CMultilineList::RenderContent(CDC & dc, CRect & r)
       int y2 = y1;
 
 		// for each column
-      for (int col = 0, x1 = r.left-m_viewXPos; (col < m_nCols); col++)
+	  int x1 = r.left-m_viewXPos;
+      for (int col = 0/*, x1 = r.left-m_viewXPos*/; (col < m_nCols); col++)
       {
 			// get the column object (if it exists) or use defaults
          Column column;
@@ -1356,6 +1387,7 @@ void CMultilineList::RenderContent(CDC & dc, CRect & r)
             NULL);
          
          textRect.right = origRight;
+		 //textRect.top += 2;
 
 			// if this row is selected, fill in the background with the selection color and
 			// set the text color
@@ -1375,8 +1407,9 @@ void CMultilineList::RenderContent(CDC & dc, CRect & r)
 		 }
           else
          {
-				// else, ensure text color is set to the non-selected color
-            dc.SetTextColor(GetSysColor(COLOR_WINDOWTEXT));
+			// else, ensure text color is set to the non-selected color
+            //dc.SetTextColor(GetSysColor(COLOR_WINDOWTEXT));
+            dc.SetTextColor(cell.m_TextColor);
          }
 
          textRect.bottom += INNER_PADDING;
@@ -1417,12 +1450,21 @@ void CMultilineList::RenderContent(CDC & dc, CRect & r)
 			//	}
 			//}
 
+			if(cell.m_marked2) 
+			{
+				CBrush markbrush(RGB(240,240,250));
+				CRect markrect(textRect);
+				markrect.bottom +=2;
+				markrect.left -=3;
+				dc.FillRect(markrect,&markbrush);
+			}
 			if(cell.m_marked) 
 			{
 				CBrush markbrush(RGB(255,220,150));
 				CRect markrect(textRect);
 				markrect.bottom +=2;
 				markrect.left -=3;
+				markrect.DeflateRect(2,2);
 				dc.FillRect(markrect,&markbrush);
 			}
 		 //}
