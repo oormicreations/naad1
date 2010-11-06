@@ -471,7 +471,7 @@ void CNaadhDlg::OnFileOpen32773()
 		//opens output file select dialog
 		CFileDialog DataFileOpenDialog(true,"nad","",OFN_HIDEREADONLY,"Naad Files (*.nad)|*.nad|All Files (*.*)|*.*||");
 		DataFileOpenDialog.m_ofn.lpstrTitle = "Load a Naad File ...";
-		//DataFileOpenDialog.m_ofn.lpstrInitialDir = m_DataFilePath;
+		DataFileOpenDialog.m_ofn.lpstrInitialDir = m_AppPath + "Compositions";
 		INT_PTR res = DataFileOpenDialog.DoModal();
 		if(res==IDCANCEL) return;
 		m_NaadhFileName = DataFileOpenDialog.GetPathName();
@@ -656,6 +656,7 @@ void CNaadhDlg::OnFileSave32774()
 void CNaadhDlg::OnFileSaveas()
 {
 	CFileDialog ResFileOpenDialog(false,"nad",m_NaadhFileName,OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,"Naad Files (*.nad)|*.nad|All Files (*.*)|*.*||");
+	ResFileOpenDialog.m_ofn.lpstrInitialDir = m_AppPath + "Compositions";
 	INT_PTR res = ResFileOpenDialog.DoModal();
 	if(res==IDOK) 
 	{
@@ -2100,6 +2101,7 @@ void CNaadhDlg::OnLoopLoadloop()
 
 	CString loopfilename;
 	CFileDialog ResFileOpenDialog(true,"nlp","",OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,"Naad Loop Files (*.nlp)|*.nlp|All Files (*.*)|*.*||");
+	ResFileOpenDialog.m_ofn.lpstrInitialDir = m_AppPath + "Loops";
 	INT_PTR res = ResFileOpenDialog.DoModal();
 	if(res==IDOK) loopfilename = ResFileOpenDialog.GetPathName();
 	if(loopfilename.IsEmpty()) return;
@@ -2183,6 +2185,7 @@ void CNaadhDlg::OnLoopSaveloop()
 
 	CString loopfilename;
 	CFileDialog ResFileOpenDialog(false,"nlp",m_Composition.m_Loop[nloop].m_LoopName,OFN_HIDEREADONLY | OFN_OVERWRITEPROMPT,"Naad Loop Files (*.nlp)|*.nlp|All Files (*.*)|*.*||");
+	ResFileOpenDialog.m_ofn.lpstrInitialDir = m_AppPath + "Loops";
 	INT_PTR res = ResFileOpenDialog.DoModal();
 	if(res==IDOK) loopfilename = ResFileOpenDialog.GetPathName();
 	if(loopfilename.IsEmpty()) return;
